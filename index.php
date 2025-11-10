@@ -17,6 +17,8 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
 <!doctype html>
 <html lang="en">
 
+
+
   <head>
     <title>Cargo &mdash; Free Website Template by Free-Template.co</title>
     <meta charset="utf-8">
