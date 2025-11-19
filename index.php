@@ -1,19 +1,4 @@
-<!-- 
-////////////////////////////////////////////////////////////////
 
-Author: Free-Template.co
-Author URL: http://free-template.co.
-License: https://creativecommons.org/licenses/by/3.0/
-License URL: https://creativecommons.org/licenses/by/3.0/
-Site License URL: https://free-template.co/template-license/
-  
-Website:  https://free-template.co
-Facebook: https://www.facebook.com/FreeDashTemplate.co
-Twitter:  https://twitter.com/Free_Templateco
-RSS Feed: https://feeds.feedburner.com/Free-templateco
-
-////////////////////////////////////////////////////////////////
--->
 <!doctype html>
 <html lang="en">
 
@@ -96,7 +81,7 @@ RSS Feed: https://feeds.feedburner.com/Free-templateco
 
 
             <div class="site-logo">
-              <a href="index.html" class="text-black"><span class="text-primary">Cargo</a>
+              <a href="index.php" class="text-black"><img src="images/KRL-Logo.png" alt="Kabul Royals Logistics Logo" width="65px"></a>
             </div>
 
             <div class="col-12">
