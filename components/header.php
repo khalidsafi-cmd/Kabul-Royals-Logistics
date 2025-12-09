@@ -60,7 +60,7 @@
                     <a href="service.php" class="nav-link">Service</a>
                 </li>
                 <li class="nav-item">
-                    <a href="blog.php" class="nav-link">Blog</a>
+                    <a href="career.php" class="nav-link">Career</a>
                 </li>
                 <li class="nav-item">
                     <a href="contact.php" class="nav-link">Contact</a>
