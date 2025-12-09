@@ -1,13 +1,13 @@
 <!-- Footer Start -->
-<div class="container-fluid bg-dark text-white mt-5 py-5 px-sm-3 px-md-5">
-    <div class="row pt-5">
+<div class="container-fluid bg-dark text-white mt-3 py-3 px-sm-3 px-md-5">
+    <div class="row pt-3">
         <!-- Contact Info -->
-        <div class="col-lg-4 col-md-6 mb-5">
-            <h3 class="text-primary mb-4">Get In Touch</h3>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <h3 class="text-primary mb-3">Get In Touch</h3>
             <p><i class="fa fa-map-marker-alt mr-2"></i>House# 24, Alley in front of Kabul Dubai Hotel, Darulaman Street, Kabul, Afghanistan</p>
             <p><i class="fa fa-phone-alt mr-2"></i>+93 77 870 7277</p>
             <p><i class="fa fa-envelope mr-2"></i>info@kabulroyals.com</p>
-            <div class="d-flex justify-content-start mt-4">
+            <div class="d-flex justify-content-start mt-3">
                 <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
                 <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
                 <a class="btn btn-outline-light btn-social mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
@@ -16,29 +16,29 @@
         </div>
 
         <!-- Quick Links -->
-        <div class="col-lg-4 col-md-6 mb-5">
-            <h3 class="text-primary mb-4">Quick Links</h3>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <h3 class="text-primary mb-3">Quick Links</h3>
             <div class="d-flex flex-column justify-content-start">
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
-                <a class="text-white mb-2" href="#"><i class="fa fa-angle-right mr-2"></i>Pricing Plan</a>
+                <a class="text-white mb-1" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                <a class="text-white mb-1" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                <a class="text-white mb-1" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+                <a class="text-white mb-1" href="#"><i class="fa fa-angle-right mr-2"></i>Pricing Plan</a>
                 <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
             </div>
         </div>
 
         <!-- About / Company Info -->
-        <div class="col-lg-4 col-md-6 mb-5">
-            <h3 class="text-primary mb-4">About Kabul Royals</h3>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <h3 class="text-primary mb-3">About Kabul Royals</h3>
             <p>Kabul Royals Logistics Services Company provides reliable and timely logistics, transportation, and delivery solutions across Afghanistan. We prioritize safety, speed, and customer satisfaction in all our services.</p>
         </div>
     </div>
 </div>
 
 <!-- Footer Bottom -->
-<div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: #3E3E4E !important;">
+<div class="container-fluid bg-dark text-white border-top py-2 px-sm-3 px-md-5" style="border-color: #3E3E4E !important;">
     <div class="row">
-        <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
+        <div class="col-lg-6 text-center text-md-left mb-2 mb-md-0">
             <p class="m-0 text-white">&copy; <a href="#">Kabul Royals Logistic Services Company</a>. All Rights Reserved. 
             Designed by <a href="https://github.com/khalidsafi-cmd">KBS Team</a>
             </p>
@@ -63,6 +63,6 @@
 </div>
 <!-- Footer End -->
 
-<!-- Back to Top -->
+ <!-- Back to Top -->
     <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
