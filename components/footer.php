@@ -44,11 +44,8 @@
     <div class="container-fluid bg-dark text-white border-top py-4 px-sm-3 px-md-5" style="border-color: #3E3E4E !important;">
         <div class="row">
             <div class="col-lg-6 text-center text-md-left mb-3 mb-md-0">
-                <p class="m-0 text-white">&copy; <a href="#">Your Site Name</a>. All Rights Reserved. 
-				
-				<!--/*** The author’s attribution link below must remain intact on your website. ***/-->
-                <!--/*** If you wish to remove this credit link, please purchase the Pro Version from https://htmlcodex.com . ***/-->
-                Designed by <a href="https://htmlcodex.com">HTML Codex</a>
+                <p class="m-0 text-white">&copy; <a href="#">Kabul Royals Logistic Services Company</a>. All Rights Reserved. 
+                Designed by <a href="https://github.com/khalidsafi-cmd">KBS Team</a>
                 </p>
             </div>
             <div class="col-lg-6 text-center text-md-right">
