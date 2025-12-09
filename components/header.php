@@ -37,9 +37,9 @@
     <nav class="navbar navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
         <!-- Brand -->
         <a href="index.php" class="navbar-brand ml-lg-3">
-            <h5 class="m-0 display-5 text-uppercase text-primary">
+            <h3 class="m-0 display-5 text-uppercase text-primary">
                 <i class="fa fa-truck mr-2"></i>Kabul Royals Logistics
-            </h5>
+            </h3>
         </a>
 
         <!-- Toggler -->
