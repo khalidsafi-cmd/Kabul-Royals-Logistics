@@ -1,3 +1,7 @@
+CREATE DATABASE IF NOT EXISTS kabul_royals_logistics;
+
+USE kabul_royals_logistics;
+
 CREATE TABLE IF NOT EXISTS careers (
     id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(255) NOT NULL,
@@ -29,5 +33,8 @@ CREATE TABLE IF NOT EXISTS admins (
 
 -- Insert admin user with a hashed password
 INSERT INTO admins (username, password) 
-VALUES ('baharanoorzai', '13b5e30edf8e14b52dd8cca04909aa4c05177d51');
+VALUES ('baharanoorzai', '$2y$10$vXJyTo2kpX3aOJY/vVXmUeW55re0DE2IjTgpKjaEjZhh0PdCyuxaG');
+
+-- USERNAME: baharanoorzai
+-- PASSWORD: bahar
 
