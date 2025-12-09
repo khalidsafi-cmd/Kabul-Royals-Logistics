@@ -47,18 +47,33 @@
             </div>
             <div class="row">
                 <?php
-                require 'db.php';
-                $jobs = $pdo->query("SELECT * FROM careers")->fetchAll();
-                foreach ($jobs as $job): ?>
-                    <div class="col-md-6 mb-5">
-                        <div class="bg-secondary" style="padding: 30px;">
-                            <h4 class="font-weight-bold mb-3"><?= htmlspecialchars($job['title']) ?></h4>
-                            <p><?= htmlspecialchars($job['description']) ?></p>
-                            <p><strong>Requirements:</strong> <?= htmlspecialchars($job['requirements']) ?></p>
-                            <a class="btn btn-primary" href="apply.php?job_id=<?= $job['id'] ?>">Apply Now</a>
+                require 'config/db.php';
+
+                try {
+                    // Fetch all job postings
+                    $stmt = $pdo->query("SELECT * FROM careers");
+                    $careers = $stmt->fetchAll();
+
+                    if (count($careers) > 0):
+                        foreach ($careers as $job): ?>
+                            <div class="col-md-6 mb-5">
+                                <div class="bg-secondary" style="padding: 30px;">
+                                    <h4 class="font-weight-bold mb-3"><?= htmlspecialchars($job['title']) ?></h4>
+                                    <p><?= htmlspecialchars($job['description']) ?></p>
+                                    <p><strong>Requirements:</strong> <?= htmlspecialchars($job['requirements']) ?></p>
+                                    <a class="btn btn-primary" href="apply.php?job_id=<?= $job['id'] ?>">Apply Now</a>
+                                </div>
+                            </div>
+                        <?php endforeach;
+                    else: ?>
+                        <div class="col-12">
+                            <p class="text-center">No job postings available at the moment. Please check back later.</p>
                         </div>
-                    </div>
-                <?php endforeach; ?>
+                    <?php endif;
+                } catch (PDOException $e) {
+                    echo "<div class='col-12'><p class='text-center text-danger'>Failed to load job postings. Please try again later.</p></div>";
+                }
+                ?>
             </div>
         </div>
     </div>
