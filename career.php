@@ -1,4 +1,3 @@
-<!-- filepath: c:\xampp\htdocs\Kabul-Royals-Logistics\career.php -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -39,41 +38,64 @@
     <!-- Header End -->
 
     <!-- Careers Section Start -->
-    <div class="container-fluid pt-5">
+    <div class="container-fluid pt-5 pb-5">
         <div class="container">
-            <div class="text-center pb-2">
+            <div class="text-center pb-4">
                 <h6 class="text-primary text-uppercase font-weight-bold">Join Our Team</h6>
-                <h1 class="mb-4">Explore Career Opportunities</h1>
+                <h1 class="mb-4">Current Job Openings</h1>
+                <p class="text-muted w-75 mx-auto">
+                    At Kabul Royals Logistics, we are committed to building a high-performing workforce.
+                    Explore open positions and become part of a company that values professionalism, growth, 
+                    and operational excellence.
+                </p>
             </div>
+
             <div class="row">
+
+                <!-- ======== BACKEND LOGIC (UNCHANGED) ======== -->
                 <?php
                 require 'config/db.php';
 
                 try {
-                    // Fetch all job postings
                     $stmt = $pdo->query("SELECT * FROM careers");
                     $careers = $stmt->fetchAll();
 
                     if (count($careers) > 0):
                         foreach ($careers as $job): ?>
-                            <div class="col-md-6 mb-5">
-                                <div class="bg-secondary" style="padding: 30px;">
-                                    <h4 class="font-weight-bold mb-3"><?= htmlspecialchars($job['title']) ?></h4>
-                                    <p><?= htmlspecialchars($job['description']) ?></p>
-                                    <p><strong>Requirements:</strong> <?= htmlspecialchars($job['requirements']) ?></p>
-                                    <a class="btn btn-primary" href="apply.php?job_id=<?= $job['id'] ?>">Apply Now</a>
+                            <div class="col-md-6 mb-4">
+                                <div class="card shadow-sm border-0 h-100">
+                                    <div class="card-body p-4">
+                                        <h4 class="font-weight-bold mb-3"><?= htmlspecialchars($job['title']) ?></h4>
+
+                                        <p class="text-muted">
+                                            <?= nl2br(htmlspecialchars($job['description'])) ?>
+                                        </p>
+
+                                        <p class="mb-3">
+                                            <strong>Requirements:</strong><br>
+                                            <span class="text-dark">
+                                                <?= nl2br(htmlspecialchars($job['requirements'])) ?>
+                                            </span>
+                                        </p>
+
+                                        <a class="btn btn-primary px-4" href="apply.php?job_id=<?= $job['id'] ?>">
+                                            Apply Now
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         <?php endforeach;
                     else: ?>
-                        <div class="col-12">
-                            <p class="text-center">No job postings available at the moment. Please check back later.</p>
+                        <div class="col-12 text-center">
+                            <p class="text-muted">There are no job openings at the moment. Please check back soon.</p>
                         </div>
                     <?php endif;
                 } catch (PDOException $e) {
-                    echo "<div class='col-12'><p class='text-center text-danger'>Failed to load job postings. Please try again later.</p></div>";
+                    echo "<div class='col-12 text-center text-danger'>Unable to load job listings. Please try again later.</div>";
                 }
                 ?>
+                <!-- ======== BACKEND LOGIC END ======== -->
+
             </div>
         </div>
     </div>
