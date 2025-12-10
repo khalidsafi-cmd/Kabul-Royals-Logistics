@@ -9,6 +9,9 @@ require '../config/db.php';
 
 // Fetch all job postings
 $careers = $pdo->query("SELECT * FROM careers")->fetchAll();
+
+// Fetch the total number of applications
+$totalApplications = $pdo->query("SELECT COUNT(*) AS total FROM applications")->fetchColumn();
 ?>
 
 <!DOCTYPE html>
@@ -39,12 +42,16 @@ $careers = $pdo->query("SELECT * FROM careers")->fetchAll();
         a:hover {
             text-decoration: underline;
         }
+        .summary {
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
     <h1>Welcome, <?= htmlspecialchars($_SESSION['admin']) ?></h1>
     <p>
         <a href="add-job.php">Add New Job</a> | 
+        <a href="view-applications.php">View Applications (<?= $totalApplications ?>)</a> | 
         <a href="logout.php">Logout</a>
     </p>
 
