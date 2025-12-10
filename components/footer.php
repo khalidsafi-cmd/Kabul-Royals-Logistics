@@ -19,11 +19,11 @@
         <div class="col-lg-4 col-md-6 mb-4">
             <h3 class="text-primary mb-3">Quick Links</h3>
             <div class="d-flex flex-column justify-content-start">
-                <a class="text-white mb-1" href="#"><i class="fa fa-angle-right mr-2"></i>Home</a>
-                <a class="text-white mb-1" href="#"><i class="fa fa-angle-right mr-2"></i>About Us</a>
-                <a class="text-white mb-1" href="#"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
-                <a class="text-white mb-1" href="#"><i class="fa fa-angle-right mr-2"></i>Pricing Plan</a>
-                <a class="text-white" href="#"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
+                <a class="text-white mb-1" href="index.php"><i class="fa fa-angle-right mr-2"></i>Home</a>
+                <a class="text-white mb-1" href="about.php"><i class="fa fa-angle-right mr-2"></i>About Us</a>
+                <a class="text-white mb-1" href="service.php"><i class="fa fa-angle-right mr-2"></i>Our Services</a>
+                <a class="text-white mb-1" href="career.php"><i class="fa fa-angle-right mr-2"></i>Career</a>
+                <a class="text-white" href="    contact.php"><i class="fa fa-angle-right mr-2"></i>Contact Us</a>
             </div>
         </div>
 
@@ -63,6 +63,6 @@
 </div>
 <!-- Footer End -->
 
- <!-- Back to Top -->
-    <a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
+<!-- Back to Top -->
+<a href="#" class="btn btn-lg btn-primary back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
