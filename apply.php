@@ -209,5 +209,7 @@ if (!$job) {
     </form>
 </div>
 
+<script src="js/main.js"></script>
+
 </body>
 </html>
