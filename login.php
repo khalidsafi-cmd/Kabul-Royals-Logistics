@@ -40,99 +40,100 @@ if (isset($_SESSION['error'])) {
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Admin Login</title>
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-<style>
-    body {
-        font-family: 'Poppins', Arial, sans-serif;
-        background-color: #ffe3d8ff;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        min-height: 100vh;
-    }
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Admin Login</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+        <link rel="icon" type="image/x-icon" href="img/favicon.png">
+        <style>
+            body {
+                font-family: 'Poppins', Arial, sans-serif;
+                background-color: #ffe3d8ff;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 100vh;
+            }
 
-    .login-card {
-        background: #fff;
-        padding: 60px 40px;
-        border-radius: 15px;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.25);
-        width: 100%;
-        max-width: 480px;
-        box-sizing: border-box;
-    }
+            .login-card {
+                background: #fff;
+                padding: 60px 40px;
+                border-radius: 15px;
+                box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+                width: 100%;
+                max-width: 480px;
+                box-sizing: border-box;
+            }
 
-    .login-card h2 {
-        text-align: center;
-        margin-bottom: 40px;
-        color: #FF4800;
-        font-size: 2.5rem;
-    }
+            .login-card h2 {
+                text-align: center;
+                margin-bottom: 40px;
+                color: #FF4800;
+                font-size: 2.5rem;
+            }
 
-    .form-group {
-        margin-bottom: 25px;
-    }
+            .form-group {
+                margin-bottom: 25px;
+            }
 
-    label {
-        display: block;
-        margin-bottom: 8px;
-        font-size: 1.1rem;
-    }
+            label {
+                display: block;
+                margin-bottom: 8px;
+                font-size: 1.1rem;
+            }
 
-    input {
-        width: 100%;
-        padding: 15px 12px;
-        font-size: 1.2rem;
-        border: 1px solid #ccc;
-        border-radius: 8px;
-        box-sizing: border-box;
-    }
+            input {
+                width: 100%;
+                padding: 15px 12px;
+                font-size: 1.2rem;
+                border: 1px solid #ccc;
+                border-radius: 8px;
+                box-sizing: border-box;
+            }
 
-    button {
-        width: 100%;
-        padding: 15px;
-        font-size: 1.2rem;
-        background-color: #FF4800;
-        color: #fff;
-        border: none;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: background 0.3s ease;
-    }
+            button {
+                width: 100%;
+                padding: 15px;
+                font-size: 1.2rem;
+                background-color: #FF4800;
+                color: #fff;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background 0.3s ease;
+            }
 
-    button:hover {
-        background-color: #e63d00;
-    }
+            button:hover {
+                background-color: #e63d00;
+            }
 
-    .error {
-        color: #fff;
-        background-color: #dc3545;
-        padding: 12px;
-        margin-bottom: 25px;
-        border-radius: 8px;
-        text-align: center;
-        font-size: 1.1rem;
-        transition: opacity 0.3s ease;
-    }
+            .error {
+                color: #fff;
+                background-color: #dc3545;
+                padding: 12px;
+                margin-bottom: 25px;
+                border-radius: 8px;
+                text-align: center;
+                font-size: 1.1rem;
+                transition: opacity 0.3s ease;
+            }
 
-    @media (max-width: 500px) {
-        .login-card {
-            padding: 40px 20px;
-        }
-        .login-card h2 {
-            font-size: 2rem;
-        }
-        input, button {
-            font-size: 1rem;
-            padding: 12px;
-        }
-    }
-</style>
+            @media (max-width: 500px) {
+                .login-card {
+                    padding: 40px 20px;
+                }
+                .login-card h2 {
+                    font-size: 2rem;
+                }
+                input, button {
+                    font-size: 1rem;
+                    padding: 12px;
+                }
+            }
+        </style>
 </head>
 <body>
 

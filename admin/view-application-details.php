@@ -43,6 +43,8 @@ try {
 
 <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
 
+<link rel="icon" type="image/x-icon" href="img/favicon.png">
+
 <style>
 body {
     font-family: 'Poppins', Arial, sans-serif;

@@ -18,6 +18,8 @@
 
         <!-- Customized Bootstrap Stylesheet -->
         <link href="css/style.css" rel="stylesheet">
+        
+        <link rel="icon" type="image/x-icon" href="img/favicon.png">
     </head>
 
     <body>
