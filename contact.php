@@ -47,16 +47,15 @@
             <div class="row">
                 <div class="col-lg-5 pb-4 pb-lg-0">
                     <div class="bg-primary text-dark text-center p-4">
-                        <h4 class="m-0"><i class="fa fa-map-marker-alt text-white mr-2"></i>123 Street, New York, USA</h4>
+                        <h4 class="m-0"><i class="fa fa-map-marker-alt text-white mr-2"></i>Kabul, Afghanistan</h4>
                     </div>
                     <iframe style="width: 100%; height: 520px;"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
+                        src="https://www.google.com/maps?q=34.497646,69.147439&z=17&output=embed"
                         frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
                 <div class="col-lg-7">
                     <h6 class="text-primary text-uppercase font-weight-bold">Contact Us</h6>
                     <h1 class="mb-4">Contact For Any Queries</h1>
-                    <h5 class="mb-4">Receive messages instantly with our PHP and Ajax contact form - available in the <a href="https://htmlcodex.com/downloading/?item=1309">Pro Version</a> only.</h5>
                     <div class="contact-form bg-secondary" style="padding: 30px;">
                         <div id="success"></div>
                         <?php if(isset($_GET['sent']) && $_GET['sent'] == 1): ?>
