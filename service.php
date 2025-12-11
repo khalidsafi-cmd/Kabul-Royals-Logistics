@@ -3,17 +3,15 @@
 
 <head>
     <meta charset="utf-8">
-    <title>KRL Logistic Services</title>
+    <title>Kabul Royals Logistics – Services</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="Free HTML Templates" name="keywords">
-    <meta content="Free HTML Templates" name="description">
 
     <!-- Favicon -->
     <link href="img/favicon.ico" rel="icon">
 
     <!-- Google Web Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
@@ -23,134 +21,143 @@
 </head>
 
 <body>
+
     <!-- Include Header -->
     <?php include 'components/header.php'; ?>
 
-
-    <!-- Header Start -->
+    <!-- Page Header Start -->
     <div class="jumbotron jumbotron-fluid mb-5">
         <div class="container text-center py-5">
-            <h1 class="text-white display-3">Service</h1>
+            <h1 class="text-white display-3">Our Services</h1>
             <div class="d-inline-flex align-items-center text-white">
-                <p class="m-0"><a class="text-white" href="">Home</a></p>
+                <p class="m-0"><a class="text-white" href="index.php">Home</a></p>
                 <i class="fa fa-circle px-3"></i>
-                <p class="m-0">Service</p>
+                <p class="m-0">Services</p>
             </div>
         </div>
     </div>
-    <!-- Header End -->
+    <!-- Page Header End -->
 
 
     <!-- Services Start -->
-    <div class="container-fluid pt-5">
+    <div class="container-fluid pt-5 pb-5">
         <div class="container">
-            <div class="text-center pb-2">
-                <h6 class="text-primary text-uppercase font-weight-bold">Our Services</h6>
-                <h1 class="mb-4">Best Logistic Services</h1>
+            <div class="text-center pb-4">
+                <h6 class="text-primary text-uppercase font-weight-bold">What We Offer</h6>
+                <h1 class="mb-4">Professional Logistics Services Across Afghanistan</h1>
+                <p class="mx-auto" style="max-width: 750px;">
+                    Kabul Royals Logistics provides end-to-end logistics services supporting UN agencies, NGOs,
+                    humanitarian missions, health programs, construction projects, and the private sector across Afghanistan.
+                </p>
             </div>
-            <div class="row pb-3">
-                <div class="col-lg-3 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
-                        <i class="fa fa-2x fa-plane text-dark pr-3"></i>
-                        <h6 class="text-white font-weight-medium m-0">Air Freight</h6>
+
+            <div class="row">
+
+                <!-- UN Event Logistics -->
+                <div class="col-lg-4 col-md-6 mb-5 text-center">
+                    <div class="d-flex align-items-center justify-content-center bg-primary mb-3 p-4">
+                        <i class="fa fa-2x fa-calendar-check text-dark pr-3"></i>
+                        <h6 class="text-white font-weight-medium m-0">UN Event Logistics</h6>
                     </div>
-                    <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet diam sea est diam</p>
-                    <a class="border-bottom text-decoration-none" href="">Read More</a>
+                    <p>
+                        Full logistical support for UN conferences, trainings, field missions, workshops, and
+                        emergency deployments, including venue setup, equipment delivery, and coordination.
+                    </p>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
-                        <i class="fa fa-2x fa-ship text-dark pr-3"></i>
-                        <h6 class="text-white font-weight-medium m-0">Ocean Freight</h6>
+
+                <!-- Health & Polio Logistics -->
+                <div class="col-lg-4 col-md-6 mb-5 text-center">
+                    <div class="d-flex align-items-center justify-content-center bg-primary mb-3 p-4">
+                        <i class="fa fa-2x fa-medkit text-dark pr-3"></i>
+                        <h6 class="text-white font-weight-medium m-0">Health & Polio Program Logistics</h6>
                     </div>
-                    <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet diam sea est diam</p>
-                    <a class="border-bottom text-decoration-none" href="">Read More</a>
+                    <p>
+                        Distribution of vaccines, medical supplies, cold-chain management, storage solutions,
+                        and nationwide transportation support for health and polio operations.
+                    </p>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
+
+                <!-- Construction & Road-Building Logistics -->
+                <div class="col-lg-4 col-md-6 mb-5 text-center">
+                    <div class="d-flex align-items-center justify-content-center bg-primary mb-3 p-4">
+                        <i class="fa fa-2x fa-road text-dark pr-3"></i>
+                        <h6 class="text-white font-weight-medium m-0">Construction & Road-Building Logistics</h6>
+                    </div>
+                    <p>
+                        Delivery of construction materials, machinery, aggregates, and fuel for infrastructure
+                        and road-building projects across all provinces.
+                    </p>
+                </div>
+
+                <!-- Heavy Loads Transportation -->
+                <div class="col-lg-4 col-md-6 mb-5 text-center">
+                    <div class="d-flex align-items-center justify-content-center bg-primary mb-3 p-4">
+                        <i class="fa fa-2x fa-truck-loading text-dark pr-3"></i>
+                        <h6 class="text-white font-weight-medium m-0">Heavy Load Transportation</h6>
+                    </div>
+                    <p>
+                        Secure movement of oversized and high-value cargo using flatbeds, low-beds, cranes,
+                        and specialized equipment for industrial and humanitarian sectors.
+                    </p>
+                </div>
+
+                <!-- Multi-Modal & Road Transport -->
+                <div class="col-lg-4 col-md-6 mb-5 text-center">
+                    <div class="d-flex align-items-center justify-content-center bg-primary mb-3 p-4">
                         <i class="fa fa-2x fa-truck text-dark pr-3"></i>
-                        <h6 class="text-white font-weight-medium m-0">Land Transport</h6>
+                        <h6 class="text-white font-weight-medium m-0">National Road Transport</h6>
                     </div>
-                    <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet diam sea est diam</p>
-                    <a class="border-bottom text-decoration-none" href="">Read More</a>
+                    <p>
+                        Nationwide trucking services including LTL/FTL, inter-provincial cargo movement,
+                        humanitarian delivery, and project-based logistics operations.
+                    </p>
                 </div>
-                <div class="col-lg-3 col-md-6 text-center mb-5">
-                    <div class="d-flex align-items-center justify-content-center bg-primary mb-4 p-4">
-                        <i class="fa fa-2x fa-store text-dark pr-3"></i>
-                        <h6 class="text-white font-weight-medium m-0">Cargo Storage</h6>
+
+                <!-- Warehousing & Storage -->
+                <div class="col-lg-4 col-md-6 mb-5 text-center">
+                    <div class="d-flex align-items-center justify-content-center bg-primary mb-3 p-4">
+                        <i class="fa fa-2x fa-warehouse text-dark pr-3"></i>
+                        <h6 class="text-white font-weight-medium m-0">Warehousing & Secure Storage</h6>
                     </div>
-                    <p>Diam amet eos at no eos sit lorem, amet rebum ipsum clita stet diam sea est diam</p>
-                    <a class="border-bottom text-decoration-none" href="">Read More</a>
+                    <p>
+                        Secure warehousing in Kabul with 24/7 protection, storage yard for containers and equipment,
+                        and full inventory management support.
+                    </p>
                 </div>
+
+                <!-- Supply Chain & Customs -->
+                <div class="col-lg-4 col-md-6 mb-5 text-center">
+                    <div class="d-flex align-items-center justify-content-center bg-primary mb-3 p-4">
+                        <i class="fa fa-2x fa-cogs text-dark pr-3"></i>
+                        <h6 class="text-white font-weight-medium m-0">Supply Chain & Customs Support</h6>
+                    </div>
+                    <p>
+                        Professional customs clearance, documentation, procurement support, and
+                        end-to-end supply chain solutions for humanitarian and development partners.
+                    </p>
+                </div>
+
             </div>
         </div>
     </div>
     <!-- Services End -->
 
 
-    <!-- Contact Start -->
-    <div class="container-fluid py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-5 pb-4 pb-lg-0">
-                    <div class="bg-primary text-dark text-center p-4">
-                        <h4 class="m-0"><i class="fa fa-map-marker-alt text-white mr-2"></i>123 Street, New York, USA</h4>
-                    </div>
-                    <iframe style="width: 100%; height: 520px;"
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001156.4288297426!2d-78.01371936852176!3d42.72876761954724!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sbd!4v1603794290143!5m2!1sen!2sbd"
-                        frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-                </div>
-                <div class="col-lg-7">
-                    <h6 class="text-primary text-uppercase font-weight-bold">Contact Us</h6>
-                    <h1 class="mb-4">Contact For Any Queries</h1>
-                    <h5 class="mb-4">Receive messages instantly with our PHP and Ajax contact form - available in the <a href="https://htmlcodex.com/downloading/?item=1309">Pro Version</a> only.</h5>
-                    <div class="contact-form bg-secondary" style="padding: 30px;">
-                        <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                            <div class="control-group">
-                                <input type="text" class="form-control border-0 p-4" id="name" placeholder="Your Name"
-                                    required="required" data-validation-required-message="Please enter your name" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <input type="email" class="form-control border-0 p-4" id="email" placeholder="Your Email"
-                                    required="required" data-validation-required-message="Please enter your email" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control border-0 p-4" id="subject" placeholder="Subject"
-                                    required="required" data-validation-required-message="Please enter a subject" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <textarea class="form-control border-0 py-3 px-4" rows="3" id="message" placeholder="Message"
-                                    required="required"
-                                    data-validation-required-message="Please enter your message"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div>
-                                <button class="btn btn-primary py-3 px-4" type="submit" id="sendMessageButton">Send
-                                    Message</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
+    <!-- Contact CTA -->
+    <div class="container-fluid bg-primary text-dark py-5">
+        <div class="container text-center">
+            <h1 class="mb-3">Need Reliable Logistics Support?</h1>
+            <p class="mb-4">Contact our team for service inquiries, contracts, or partnership opportunities.</p>
+            <a href="contact.php" class="btn btn-dark py-3 px-5">Contact Us</a>
         </div>
     </div>
-    <!-- Contact End -->
-
 
     <!-- Include Footer -->
     <?php include 'components/footer.php'; ?>
 
-    <!-- JavaScript Libraries -->
+    <!-- JS Files -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
 </body>
-
 </html>

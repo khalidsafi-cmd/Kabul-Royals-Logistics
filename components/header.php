@@ -1,3 +1,7 @@
+    <?php
+    $current_page = basename($_SERVER['PHP_SELF']);
+    ?>
+
     <!-- Topbar Start -->
     <div class="container-fluid bg-dark">
         <div class="row py-2 px-lg-5">
@@ -51,19 +55,19 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ml-auto py-0">
                 <li class="nav-item">
-                    <a href="index.php" class="nav-link active">Home</a>
+                    <a href="index.php" class="nav-link <?php if($current_page == 'index.php') {echo 'active';}?> ">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a href="about.php" class="nav-link">About</a>
+                    <a href="about.php" class="nav-link <?php if($current_page == 'about.php'){ echo 'active'; } ?>">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="service.php" class="nav-link">Service</a>
+                    <a href="service.php" class="nav-link <?php if($current_page == 'service.php'){ echo 'active'; } ?>">Service</a>
                 </li>
                 <li class="nav-item">
-                    <a href="blog.php" class="nav-link">Blog</a>
+                    <a href="career.php" class="nav-link <?php if($current_page == 'career.php'){ echo 'active'; } ?>">Career</a>
                 </li>
                 <li class="nav-item">
-                    <a href="contact.php" class="nav-link">Contact</a>
+                    <a href="contact.php" class="nav-link <?php if($current_page == 'contact.php'){ echo 'active'; } ?>">Contact</a>
                 </li>
             </ul>
         </div>
