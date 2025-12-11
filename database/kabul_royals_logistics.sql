@@ -33,8 +33,8 @@ CREATE TABLE IF NOT EXISTS admins (
 
 -- Insert admin user with a hashed password
 INSERT INTO admins (username, password) 
-VALUES ('baharanoorzai', '$2y$10$vXJyTo2kpX3aOJY/vVXmUeW55re0DE2IjTgpKjaEjZhh0PdCyuxaG');
+VALUES ('admin', '$2y$10$pdtd5pQbEjPaZsixbRsHsOnMnPzOWq.iMzqx5EjokEZ8Fics.8L5.');
 
--- USERNAME: baharanoorzai
--- PASSWORD: bahar
+-- USERNAME: admin
+-- PASSWORD: Royals@2025
 

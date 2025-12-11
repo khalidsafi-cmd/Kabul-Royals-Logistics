@@ -57,49 +57,47 @@
                     <h6 class="text-primary text-uppercase font-weight-bold">Contact Us</h6>
                     <h1 class="mb-4">Contact For Any Queries</h1>
                     <div class="contact-form bg-secondary" style="padding: 30px;">
-                        <div id="success"></div>
-                        <?php if(isset($_GET['sent']) && $_GET['sent'] == 1): ?>
-                        <script>
-                            alert('Your email has been sent!');
-                        </script>
-                        <?php endif; ?>
-
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate" action="send-email.php" method="POST">
-    <div class="control-group">
-        <input type="text" class="form-control border-0 p-4" 
-            id="name" name="name" placeholder="Your Name"
-            required="required" 
-            data-validation-required-message="Please enter your name" />
-        <p class="help-block text-danger"></p>
-    </div>
-    <div class="control-group">
-        <input type="email" class="form-control border-0 p-4" 
-            id="email" name="email" placeholder="Your Email"
-            required="required" 
-            data-validation-required-message="Please enter your email" />
-        <p class="help-block text-danger"></p>
-    </div>
-    <div class="control-group">
-        <input type="text" class="form-control border-0 p-4" 
-            id="subject" name="subject" placeholder="Subject"
-            required="required" 
-            data-validation-required-message="Please enter a subject" />
-        <p class="help-block text-danger"></p>
-    </div>
-    <div class="control-group">
-        <textarea class="form-control border-0 py-3 px-4" 
-            rows="3" id="message" name="message" placeholder="Message"
-            required="required"
-            data-validation-required-message="Please enter your message"></textarea>
-        <p class="help-block text-danger"></p>
-    </div>
-    <div>
-        <button class="btn btn-primary py-3 px-4" type="submit" id="sendMessageButton">
-            Send Message
-        </button>
-    </div>
-</form>
-
+                            <div id="success"></div>
+                            <?php if(isset($_GET['sent']) && $_GET['sent'] == 1): ?>
+                            <script>
+                                alert('Your email has been sent!');
+                            </script>
+                            <?php endif; ?>
+                            <form name="sentMessage" id="contactForm" novalidate="novalidate" action="send-email.php" method="POST">
+                                <div class="control-group">
+                                    <input type="text" class="form-control border-0 p-4" 
+                                        id="name" name="name" placeholder="Your Name"
+                                        required="required" 
+                                        data-validation-required-message="Please enter your name" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    <input type="email" class="form-control border-0 p-4" 
+                                        id="email" name="email" placeholder="Your Email"
+                                        required="required" 
+                                        data-validation-required-message="Please enter your email" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    <input type="text" class="form-control border-0 p-4" 
+                                        id="subject" name="subject" placeholder="Subject"
+                                        required="required" 
+                                        data-validation-required-message="Please enter a subject" />
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div class="control-group">
+                                    <textarea class="form-control border-0 py-3 px-4" 
+                                        rows="3" id="message" name="message" placeholder="Message"
+                                        required="required"
+                                        data-validation-required-message="Please enter your message"></textarea>
+                                    <p class="help-block text-danger"></p>
+                                </div>
+                                <div>
+                                    <button class="btn btn-primary py-3 px-4" type="submit" id="sendMessageButton">
+                                        Send Message
+                                    </button>
+                                </div>
+                            </form>
                     </div>
                 </div>
             </div>
@@ -117,10 +115,9 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
 
-    <!-- Template Javascript -->
     <script src="js/main.js"></script>
     <!-- Other JS libraries -->
-<script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 
 <script>
 window.addEventListener('pageshow', function(event) {

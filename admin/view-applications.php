@@ -18,8 +18,6 @@ try {
 } catch (PDOException $e) {
     die("Error fetching applications: " . $e->getMessage());
 }
-
-
 ?>
 
 
@@ -158,9 +156,8 @@ a.delete-btn:hover {
                                 <td><?= htmlspecialchars($app['name']); ?></td>
                                 <td><?= htmlspecialchars($app['email']); ?></td>
                                 <td><?= htmlspecialchars($app['job_title']); ?></td>
-                              <td> 
+                            <td> 
     <?php if (!empty($app['resume'])): ?>
-        <!-- Link to your application details page using the application ID -->
         <a href="view-application-details.php?id=<?= $app['id']; ?>" target="_blank">View Resume</a>
     <?php else: ?>
         N/A
