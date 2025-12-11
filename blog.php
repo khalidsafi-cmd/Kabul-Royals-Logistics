@@ -1,9 +1,35 @@
+<?php
+require_once 'lib/db_connect.php';
+
+// Handle form submission
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
+    $email = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
+    $phone = filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_STRING);
+    $position = filter_input(INPUT_POST, 'position', FILTER_SANITIZE_STRING);
+    $resume = $_FILES['resume']['name'];
+
+    // Save the uploaded resume file
+    $targetDir = "uploads/resumes/";
+    $targetFile = $targetDir . basename($resume);
+    move_uploaded_file($_FILES['resume']['tmp_name'], $targetFile);
+
+    try {
+        $stmt = $pdo->prepare("INSERT INTO careers (name, email, phone, position, resume) VALUES (?, ?, ?, ?, ?)");
+        $stmt->execute([$name, $email, $phone, $position, $resume]);
+        $successMessage = "Your application has been submitted successfully!";
+    } catch (PDOException $e) {
+        $errorMessage = "Error submitting application: " . $e->getMessage();
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="utf-8">
-    <title>FASTER - Logistics Company Website Template</title>
+    <title>KRL Logistic Services</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Free HTML Templates" name="keywords">
     <meta content="Free HTML Templates" name="description">
@@ -29,141 +55,53 @@
     <!-- Header Start -->
     <div class="jumbotron jumbotron-fluid mb-5">
         <div class="container text-center py-5">
-            <h1 class="text-white display-3">Latest Blog</h1>
+            <h1 class="text-white display-3">Careers</h1>
             <div class="d-inline-flex align-items-center text-white">
                 <p class="m-0"><a class="text-white" href="">Home</a></p>
                 <i class="fa fa-circle px-3"></i>
-                <p class="m-0">Blog</p>
+                <p class="m-0">Careers</p>
             </div>
         </div>
     </div>
     <!-- Header End -->
 
 
-    <!-- Blog Start -->
-    <div class="container-fluid pt-5">
-        <div class="container">
-            <div class="text-center pb-2">
-                <h6 class="text-primary text-uppercase font-weight-bold">Our Blog</h6>
-                <h1 class="mb-4">Latest From Blog</h1>
+    <!-- Careers Start -->
+    <div class="container mt-5">
+        <h1 class="mb-4">Join Our Team</h1>
+        <p>We are always looking for talented individuals to join our team. Please fill out the form below to apply for a position.</p>
+
+        <?php if (isset($successMessage)): ?>
+            <div class="alert alert-success"> <?php echo $successMessage; ?> </div>
+        <?php elseif (isset($errorMessage)): ?>
+            <div class="alert alert-danger"> <?php echo $errorMessage; ?> </div>
+        <?php endif; ?>
+
+        <form action="careers.php" method="POST" enctype="multipart/form-data" class="mt-4">
+            <div class="mb-3">
+                <label for="name" class="form-label">Full Name:</label>
+                <input type="text" id="name" name="name" class="form-control" required>
             </div>
-            <div class="row">
-                <div class="col-md-6 mb-5">
-                    <div class="position-relative">
-                        <img class="img-fluid w-100" src="img/blog-1.jpg" alt="">
-                        <div class="position-absolute bg-primary d-flex flex-column align-items-center justify-content-center rounded-circle"
-                            style="width: 60px; height: 60px; bottom: -30px; right: 30px;">
-                            <h4 class="font-weight-bold mb-n1">01</h4>
-                            <small class="text-white text-uppercase">Jan</small>
-                        </div>
-                    </div>
-                    <div class="bg-secondary" style="padding: 30px;">
-                        <div class="d-flex mb-3">
-                            <div class="d-flex align-items-center">
-                                <img class="rounded-circle" style="width: 40px; height: 40px;" src="img/user.jpg" alt="">
-                                <a class="text-muted ml-2" href="">John Doe</a>
-                            </div>
-                            <div class="d-flex align-items-center ml-4">
-                                <i class="far fa-bookmark text-primary"></i>
-                                <a class="text-muted ml-2" href="">Web Design</a>
-                            </div>
-                        </div>
-                        <h4 class="font-weight-bold mb-3">Kasd tempor diam sea justo dolor</h4>
-                        <p>Dolor sea ipsum ipsum et. Erat duo lorem magna vero dolor dolores. Rebum eirmod no dolor diam dolor amet ipsum. Lorem lorem sea sed diam est lorem magna</p>
-                        <a class="border-bottom border-primary text-uppercase text-decoration-none" href="">Read More <i class="fa fa-angle-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-5">
-                    <div class="position-relative">
-                        <img class="img-fluid w-100" src="img/blog-2.jpg" alt="">
-                        <div class="position-absolute bg-primary d-flex flex-column align-items-center justify-content-center rounded-circle"
-                            style="width: 60px; height: 60px; bottom: -30px; right: 30px;">
-                            <h4 class="font-weight-bold mb-n1">01</h4>
-                            <small class="text-white text-uppercase">Jan</small>
-                        </div>
-                    </div>
-                    <div class="bg-secondary" style="padding: 30px;">
-                        <div class="d-flex mb-3">
-                            <div class="d-flex align-items-center">
-                                <img class="rounded-circle" style="width: 40px; height: 40px;" src="img/user.jpg" alt="">
-                                <a class="text-muted ml-2" href="">John Doe</a>
-                            </div>
-                            <div class="d-flex align-items-center ml-4">
-                                <i class="far fa-bookmark text-primary"></i>
-                                <a class="text-muted ml-2" href="">Web Design</a>
-                            </div>
-                        </div>
-                        <h4 class="font-weight-bold mb-3">Kasd tempor diam sea justo dolor</h4>
-                        <p>Dolor sea ipsum ipsum et. Erat duo lorem magna vero dolor dolores. Rebum eirmod no dolor diam dolor amet ipsum. Lorem lorem sea sed diam est lorem magna</p>
-                        <a class="border-bottom border-primary text-uppercase text-decoration-none" href="">Read More <i class="fa fa-angle-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-5">
-                    <div class="position-relative">
-                        <img class="img-fluid w-100" src="img/blog-1.jpg" alt="">
-                        <div class="position-absolute bg-primary d-flex flex-column align-items-center justify-content-center rounded-circle"
-                            style="width: 60px; height: 60px; bottom: -30px; right: 30px;">
-                            <h4 class="font-weight-bold mb-n1">01</h4>
-                            <small class="text-white text-uppercase">Jan</small>
-                        </div>
-                    </div>
-                    <div class="bg-secondary" style="padding: 30px;">
-                        <div class="d-flex mb-3">
-                            <div class="d-flex align-items-center">
-                                <img class="rounded-circle" style="width: 40px; height: 40px;" src="img/user.jpg" alt="">
-                                <a class="text-muted ml-2" href="">John Doe</a>
-                            </div>
-                            <div class="d-flex align-items-center ml-4">
-                                <i class="far fa-bookmark text-primary"></i>
-                                <a class="text-muted ml-2" href="">Web Design</a>
-                            </div>
-                        </div>
-                        <h4 class="font-weight-bold mb-3">Kasd tempor diam sea justo dolor</h4>
-                        <p>Dolor sea ipsum ipsum et. Erat duo lorem magna vero dolor dolores. Rebum eirmod no dolor diam dolor amet ipsum. Lorem lorem sea sed diam est lorem magna</p>
-                        <a class="border-bottom border-primary text-uppercase text-decoration-none" href="">Read More <i class="fa fa-angle-right"></i></a>
-                    </div>
-                </div>
-                <div class="col-md-6 mb-5">
-                    <div class="position-relative">
-                        <img class="img-fluid w-100" src="img/blog-2.jpg" alt="">
-                        <div class="position-absolute bg-primary d-flex flex-column align-items-center justify-content-center rounded-circle"
-                            style="width: 60px; height: 60px; bottom: -30px; right: 30px;">
-                            <h4 class="font-weight-bold mb-n1">01</h4>
-                            <small class="text-white text-uppercase">Jan</small>
-                        </div>
-                    </div>
-                    <div class="bg-secondary" style="padding: 30px;">
-                        <div class="d-flex mb-3">
-                            <div class="d-flex align-items-center">
-                                <img class="rounded-circle" style="width: 40px; height: 40px;" src="img/user.jpg" alt="">
-                                <a class="text-muted ml-2" href="">John Doe</a>
-                            </div>
-                            <div class="d-flex align-items-center ml-4">
-                                <i class="far fa-bookmark text-primary"></i>
-                                <a class="text-muted ml-2" href="">Web Design</a>
-                            </div>
-                        </div>
-                        <h4 class="font-weight-bold mb-3">Kasd tempor diam sea justo dolor</h4>
-                        <p>Dolor sea ipsum ipsum et. Erat duo lorem magna vero dolor dolores. Rebum eirmod no dolor diam dolor amet ipsum. Lorem lorem sea sed diam est lorem magna</p>
-                        <a class="border-bottom border-primary text-uppercase text-decoration-none" href="">Read More <i class="fa fa-angle-right"></i></a>
-                    </div>
-                </div>
+
+            <div class="mb-3">
+                <label for="email" class="form-label">Email Address:</label>
+                <input type="email" id="email" name="email" class="form-control" required>
             </div>
-        </div>
-    </div>
-    <!-- Blog End -->
 
-    <!-- Include Footer -->
-    <?php include 'components/footer.php'; ?>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number:</label>
+                <input type="text" id="phone" name="phone" class="form-control" required>
+            </div>
 
-    <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
+            <div class="mb-3">
+                <label for="position" class="form-label">Position Applied For:</label>
+                <input type="text" id="position" name="position" class="form-control" required>
+            </div>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
-</body>
+            <div class="mb-3">
+                <label for="resume" class="form-label">Upload Resume:</label>
+                <input type="file" id="resume" name="resume" class="form-control" required>
+            </div>
 
-</html>
+            <button type="submit" class="btn btn-primary">Submit Application</button>
+        </form
