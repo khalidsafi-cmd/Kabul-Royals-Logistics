@@ -48,9 +48,9 @@
             <div class="row">
                 <div class="col-lg-5 pb-4 pb-lg-0">
                     <div class="bg-primary text-dark text-center p-4">
-                        <h4 class="m-0"><i class="fa fa-map-marker-alt text-white mr-2"></i>Kabul, Afghanistan</h4>
+                        <h4 class="m-0"><i class="fa fa-map-marker-alt text-white mr-2"></i>House# 24, Alley in front of Kabul Dubai Hotel, Darulaman Street, Kabul, Afghanistan</h4>
                     </div>
-                    <iframe style="width: 100%; height: 520px;"
+                    <iframe style="width: 100%; height: 400px;"
                         src="https://www.google.com/maps?q=34.497646,69.147439&z=17&output=embed"
                         frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
                 </div>
