@@ -59,33 +59,48 @@
                     <h5 class="mb-4">Receive messages instantly with our PHP and Ajax contact form - available in the <a href="https://htmlcodex.com/downloading/?item=1309">Pro Version</a> only.</h5>
                     <div class="contact-form bg-secondary" style="padding: 30px;">
                         <div id="success"></div>
-                        <form name="sentMessage" id="contactForm" novalidate="novalidate">
-                            <div class="control-group">
-                                <input type="text" class="form-control border-0 p-4" id="name" placeholder="Your Name"
-                                    required="required" data-validation-required-message="Please enter your name" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <input type="email" class="form-control border-0 p-4" id="email" placeholder="Your Email"
-                                    required="required" data-validation-required-message="Please enter your email" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control border-0 p-4" id="subject" placeholder="Subject"
-                                    required="required" data-validation-required-message="Please enter a subject" />
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div class="control-group">
-                                <textarea class="form-control border-0 py-3 px-4" rows="3" id="message" placeholder="Message"
-                                    required="required"
-                                    data-validation-required-message="Please enter your message"></textarea>
-                                <p class="help-block text-danger"></p>
-                            </div>
-                            <div>
-                                <button class="btn btn-primary py-3 px-4" type="submit" id="sendMessageButton">Send
-                                    Message</button>
-                            </div>
-                        </form>
+                        <?php if(isset($_GET['sent']) && $_GET['sent'] == 1): ?>
+                        <script>
+                            alert('Your email has been sent!');
+                        </script>
+                        <?php endif; ?>
+
+                        <form name="sentMessage" id="contactForm" novalidate="novalidate" action="send-email.php" method="POST">
+    <div class="control-group">
+        <input type="text" class="form-control border-0 p-4" 
+            id="name" name="name" placeholder="Your Name"
+            required="required" 
+            data-validation-required-message="Please enter your name" />
+        <p class="help-block text-danger"></p>
+    </div>
+    <div class="control-group">
+        <input type="email" class="form-control border-0 p-4" 
+            id="email" name="email" placeholder="Your Email"
+            required="required" 
+            data-validation-required-message="Please enter your email" />
+        <p class="help-block text-danger"></p>
+    </div>
+    <div class="control-group">
+        <input type="text" class="form-control border-0 p-4" 
+            id="subject" name="subject" placeholder="Subject"
+            required="required" 
+            data-validation-required-message="Please enter a subject" />
+        <p class="help-block text-danger"></p>
+    </div>
+    <div class="control-group">
+        <textarea class="form-control border-0 py-3 px-4" 
+            rows="3" id="message" name="message" placeholder="Message"
+            required="required"
+            data-validation-required-message="Please enter your message"></textarea>
+        <p class="help-block text-danger"></p>
+    </div>
+    <div>
+        <button class="btn btn-primary py-3 px-4" type="submit" id="sendMessageButton">
+            Send Message
+        </button>
+    </div>
+</form>
+
                     </div>
                 </div>
             </div>
@@ -105,6 +120,18 @@
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
+    <!-- Other JS libraries -->
+<script src="js/main.js"></script>
+
+<script>
+window.addEventListener('pageshow', function(event) {
+    if (event.persisted) {
+        const form = document.getElementById('contactForm');
+        if (form) form.reset();
+    }
+});
+</script>
 </body>
+
 
 </html>
